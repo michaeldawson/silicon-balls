@@ -6,6 +6,7 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'haml'
 gem 'turbolinks', '~> 5'
 
 group :development, :test do
@@ -18,6 +19,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'haml-lint', require: false
   gem 'reek', require: false
+
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
