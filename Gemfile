@@ -11,6 +11,9 @@ gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
