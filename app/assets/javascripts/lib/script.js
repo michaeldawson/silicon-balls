@@ -605,37 +605,4 @@ jQuery(window).resize(function() {
 	resizeAdapt();
 });
 
-
-/* Feeds */
-jQuery(document).ready(function() {
-
-	/*----------------------------------------------
-			   D R I B B B L E   F E E D
-	------------------------------------------------*/
-	if( jQuery(".dribbble-widget").length > 0){
-		jQuery('.dribbble-widget').each(function(){
-			var $theFeed = jQuery(this);
-			var dribbbleUser = $theFeed.data('user');
-			var dribbbleCount = $theFeed.data('count');
-			var dribbbleToken = $theFeed.data('accesstoken');
-
-			if (dribbbleToken) { jQuery.jribbble.setToken(dribbbleToken); }
-			else { jQuery.jribbble.setToken("YOUR CLIENT ACCESS TOKEN"); }
-
-			jQuery.jribbble.users(dribbbleUser).shots({'per_page': Number(dribbbleCount)}).then(function(res) {
-			  	var html = [];
-			  	res.forEach(function(shot) {
-					html.push('<div class="shot">');
-					html.push('<a href="' + shot.html_url + '" target="_blank">');
-					html.push('<img src="' + shot.images.normal + '">');
-					html.push('</a></div>');
-			  	});
-			  	$theFeed.html(html.join(''));
-			});
-
-		});
-	}
-
-});
-
 })(jQuery);
