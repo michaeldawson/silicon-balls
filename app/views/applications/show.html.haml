@@ -1,0 +1,33 @@
+
+%section#hero.hero-auto
+  #page-title.wrapper
+    %h1
+      We're always looking for
+      %br
+        %strong
+          %em Great People
+      .spacer-medium
+      %h5.title-alt
+        We want to talk to entrepreneurs working in early-stage technology ventures with massive growth potential.
+        %br
+        We also have limited seats available for new investors. We're looking for people bring more than just money to the table.
+      %section#page-body
+        .spacer-medium
+        .wrapper
+          #blog-grid.isotope-grid.minimal-grid-blog.blog-container.style-column-2.fitrows
+            .isotope-item.blog-item
+              = link_to '', entrepreneurs_path, class: 'full-link'
+              .blog-bg
+              .blog-item-inner.item-inner
+                .blog-info
+                  %h3.post-name Entrepreneurs
+                  %a.read-more.sr-button-with-arrow{:href => "blog-single-job.html"}
+                    %strong Read More
+            .isotope-item.blog-item
+              = link_to '', investors_path, class: 'full-link'
+              .blog-bg
+              .blog-item-inner.item-inner
+                .blog-info
+                  %h3.post-name Investors
+                  %a.read-more.sr-button-with-arrow{:href => "blog-single-job.html"}
+                    %strong Read More
