@@ -1,0 +1,5 @@
+<% message = "Computer says no." %>
+<% submessage = "#{contact.errors.full_messages.to_sentence}. You've used one of these before, right?" %>
+
+$('.alert').remove();
+$('.content').prepend("<%= j render('layouts/flash', type: :error, message: message, submessage: submessage) %>")

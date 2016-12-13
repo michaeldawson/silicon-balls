@@ -259,7 +259,7 @@ Smartphones (768px max)
 	.widget { margin-top: 35px; }
 	
 	div form:first-child { margin-top: -18px; }
-	form .form-row { margin-top: 18px; }
+	form .form-group { margin-top: 18px; }
 	form .form-submit { margin-top: 18px; }
 	table { margin-top: 18px; }
 	p img { margin-top: 18px; }

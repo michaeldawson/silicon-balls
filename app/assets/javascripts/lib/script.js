@@ -153,28 +153,29 @@ function isotopeLoadMore(grid,el,url,datas) {
 }
 
 
-jQuery(window).load(function() {
-
-
-	/*----------------------------------------------
-				S M O O T H   S H O W    (pageloader)
-	------------------------------------------------*/
-	jQuery("body").addClass("loaded");
-	setTimeout(function(){
-		jQuery("body").addClass("loading-end");
-		animateOnScroll(true);
-		headerFeatures();
-
-		/* trigger filter if hashtag is active
-		------------------------------------------------*/
-		if(window.location.hash) {
-		  	var filter = window.location.hash.substr(1);
-			if ( jQuery('.filter li a[data-slug='+filter+']').length > 0) {
-				/*setTimeout(function(){ */jQuery('.filter li a[data-slug='+filter+']').trigger( "click" );/* }, 500);*/
-			}
-		}
-
-	}, 1500);
+$(document).ready(function() {
+  console.log('running');
+//
+//
+// 	/*----------------------------------------------
+// 				S M O O T H   S H O W    (pageloader)
+// 	------------------------------------------------*/
+// 	jQuery("body").addClass("loaded");
+// 	setTimeout(function(){
+// 		jQuery("body").addClass("loading-end");
+// 		animateOnScroll(true);
+// 		headerFeatures();
+//
+// 		/* trigger filter if hashtag is active
+// 		------------------------------------------------*/
+// 		if(window.location.hash) {
+// 		  	var filter = window.location.hash.substr(1);
+// 			if ( jQuery('.filter li a[data-slug='+filter+']').length > 0) {
+// 				/*setTimeout(function(){ */jQuery('.filter li a[data-slug='+filter+']').trigger( "click" );/* }, 500);*/
+// 			}
+// 		}
+//
+// 	}, 1500);
 
 
 	/*----------------------------------------------

@@ -1,0 +1,55 @@
+%section#page-body
+  .spacer-big
+  .spacer-small
+  .wrapper.content
+    .column-section.clearfix
+      .column.one-third
+        %h4
+          %strong Drop us a line
+        %p
+          Every great fire starts with a spark.
+          %br/
+          Every great partnership starts with
+          %br>/
+          one of these contact form submissions.
+
+        .spacer-medium
+        %h6.title-alt
+          %strong Contact us
+        %p
+          +61 435 129 029
+          %br/
+          - email = 'mgmt@siliconballs.com'
+          = link_to "mailto:#{email}" do
+            %strong= email
+      .column.two-third.last-col
+        = simple_form_for contact, remote: true do |form|
+          = form.input :name
+          = form.input :email
+          = form.input :message
+          = form.submit 'Send'
+
+        -# %form#contact-form.checkform.sendemail{ action: 'contacts', :method => 'post' }
+        -#   .form-row
+        -#     %label{:for => "name"}
+        -#       Name
+        -#       %abbr.required{:title => "required"} *
+        -#     %input#name.name.req{:name => "name", :type => "text", :value => ""}/
+        -#   .form-row
+        -#     %label{:for => "email"}
+        -#       Email
+        -#       %abbr.required{:title => "required"} *
+        -#     %input#email.email.req{:name => "email", :type => "text", :value => ""}/
+        -#   .form-row
+        -#     %label{:for => "message"}
+        -#       Message
+        -#       %abbr.required{:title => "required"} *
+        -#     %textarea#message.message.req{:cols => "50", :name => "message", :rows => "30"}
+        -#   .form-row.form-note
+        -#     .alert-error
+        -#       %p Please check your entries!
+        -#   .form-row.hidden
+        -#     %input#form-check.form-check{:name => "form-check", :type => "text", :value => ""}/
+        -#   .form-row
+        -#     %input.submit{:name => "submit", :type => "submit", :value => "Send"}/
+  .spacer-big
