@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'contacts#new'
   resources :contacts, only: :create
 
+  get 'philosophy', to: 'home#philosophy'
+
   resource :application, only: :show, path: 'apply' do
     collection do
       resource :investors, only: [:show, :create]
