@@ -5,11 +5,7 @@
   #menu-inner
     %nav#main-nav
       %ul
-        %li
-          %a{:href => "index.html"} Home
-        %li
-          %a{:href => "index.html"} Philosophy
-        %li
-          %a{:href => "page-about.html"} People
-        %li
-          %a{:href => "element-buttons.html"} Contact
+        %li= link_to 'Home', root_path
+        %li= link_to 'Philosophy', root_path
+        %li= link_to 'Contact', contact_path
+        %li= link_to 'Apply', root_path

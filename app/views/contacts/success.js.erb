@@ -1,0 +1,6 @@
+<% message = "Thanks - we've received your message." %>
+<% submessage = 'We aim to respond to messages within 2 business days.' %>
+
+$('.alert').remove();
+$('.content').prepend("<%= j render('layouts/flash', type: :notice, message: message, submessage: submessage) %>")
+$('#new_contact').find('.form-control').val('');

@@ -1,4 +1,3 @@
-/ HERO
 %section#hero.hero-big{:style => "background:rgba(0,0,0,0.06);"}
   #page-title.wrapper
     %h1
@@ -6,16 +5,16 @@
       %strong
         %em Startup Fund
       %br/
-      excited about
+      that's excited about
       %strong
         %em Adelaide
     .spacer-small
     %h5.title-alt
       We fund early-stage companies with potential for big growth.
       %br>/
-      We exist to help increase the number of quality ventures in Adelaide,
+      Our goal is to help increase the number of quality ventures in Adelaide,
       %br/
-      and to provide a model for early-stage angel investment.
+      and to provide a model for early-stage angel investment in Australia.
 %section#page-body
   .spacer-big
   .wrapper
@@ -41,5 +40,5 @@
     %h3.align-center Want to talk?
     .spacer-medium
     %p.align-center
-      %a.sr-button.button-big{:href => "contact.html"} Contact us
+      = link_to 'Contact us', contact_path, class: 'sr-button button-big'
   .spacer-big

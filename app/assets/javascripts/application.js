@@ -6,5 +6,4 @@
 //= require lib/jquery.smartscroll.min
 //= require lib/jquery.owl.carousel.min
 //= require lib/jquery.lightcase.min
-//= require lib/jribbble.min
 //= require lib/script
