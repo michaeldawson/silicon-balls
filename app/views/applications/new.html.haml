@@ -1,0 +1,27 @@
+%section#page-body
+  .spacer-big
+  .spacer-small
+  .wrapper.content
+    .column-section.clearfix
+      .column.one-third
+        %h4
+          %strong Apply to pitch to Silicon Balls
+        %p We love hearing from entrepreneurs. Use this form to submit an overview of your business. We invite a small number of companies to pitch to us on a regular basis.
+        .spacer-small
+        %p The questions here are designed to help you express key tenets of your business model. Not all fields are essential, but they will help us assess your proposition and make a decision as to whether we'd like to explore your business further.
+
+      .column.two-third.last-col
+        = simple_form_for application, remote: true do |form|
+          = form.input :team, placeholder: 'Introduce your team. What are the roles of each member? What experience does each member provide?'
+          = form.input :segments, label: 'Customer segments', placeholder: 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?'
+          = form.input :problem, placeholder: 'What problem are you solving? Why is it important? How are these people already solving this problem?'
+          = form.input :solution, placeholder: 'What is your solution to this problem? Is it a work in progress? Have you tested it with customers?'
+          = form.input :revenue_streams, placeholder: 'How will you make money? Who will pay, how much will they pay, and why will they pay?'
+          = form.input :uvp, label: 'Unique value proposition', placeholder: "A single, clear statement to your customers in order to get their attention. It's not enough to just be different - that difference has to matter to your customers"
+          = form.input :channels, placeholder: 'How will you reach your customer segments?'
+          = form.input :metrics, label: 'Key metrics', placeholder: 'What constitutes your minimum success criteria? What is the smallest outcome that would deem your product a success 2 years from now?'
+          = form.input :cost_structure, placeholder: 'What are the key drivers of costs in your business model? Estimate your burn rate, or runway, as well as an estimate of fixed and variable costs.'
+          = form.input :funding, placeholder: 'What funding are you seeking? What do you need it for?'
+          = form.input :funding_equity, placeholder: 'What equity are you offering in exchange for these funds?'
+          = form.submit 'Send', onclick: 'javascript: alert("Nope. Not yet.")'
+  .spacer-big
