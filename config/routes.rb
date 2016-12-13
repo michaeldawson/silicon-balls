@@ -6,10 +6,9 @@ Rails.application.routes.draw do
 
   get 'philosophy', to: 'home#philosophy'
 
-  resource :application, only: :show, path: 'apply' do
+  resources :applications, only: [:new, :index] do
     collection do
-      resource :investors, only: [:show, :create]
-      resource :entrepreneurs, only: [:show, :create]
+      get 'investors'
     end
   end
 end
