@@ -1,6 +1,7 @@
 %header#header.wrapper.transparent.not-sticky
   .header-inner.clearfix
-    #logo
-      = link_to root_path do
-        = image_tag 'logo.png'
+    - if layout_options[:header][:display_logo]
+      #logo
+        = link_to root_path do
+          = image_tag 'logo.png'
     = render 'layouts/menu'

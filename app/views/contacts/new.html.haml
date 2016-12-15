@@ -1,3 +1,5 @@
+- email = 'mgmt@siliconballs.com'
+
 %section#page-body
   .spacer-big
   .spacer-small
@@ -7,21 +9,10 @@
         %h4
           %strong Drop us a line
         %p
-          Every great fire starts with a spark.
-          %br/
-          Every great partnership starts with
-          %br>/
-          one of these contact form submissions.
-
-        .spacer-medium
-        %h6.title-alt
-          %strong Contact us
-        %p
-          +61 435 129 029
-          %br/
-          - email = 'mgmt@siliconballs.com'
+          If you're looking for investors, please use our #{link_to 'Application form', new_application_path}. Otherwise, feel free to drop us a line using this form or at
           = link_to "mailto:#{email}" do
-            %strong= email
+            %strong #{email}.
+
       .column.two-third.last-col
         = simple_form_for contact, remote: true do |form|
           = form.input :name

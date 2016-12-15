@@ -3,6 +3,7 @@
 //= require turbolinks
 //= require lib/plugins
 //= require lib/tweenMax
+//= require lib/jquery.backgroundparallax.min
 //= require lib/jquery.smartscroll.min
 //= require lib/jquery.owl.carousel.min
 //= require lib/jquery.lightcase.min

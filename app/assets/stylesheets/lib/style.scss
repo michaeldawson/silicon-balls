@@ -1067,6 +1067,12 @@ header.menu-is-open #menu-widget {
 	.menu-toggle span.hamburger::after { margin-top: -7px; top: 0; transition-delay: 0.27s; }
 	.menu-toggle span.hamburger::before { margin-top: 7px; top: 0; transition-delay: 0.2s; }
 
+#menu.white {
+  .menu-toggle span.hamburger, .menu-toggle span.hamburger::after, .menu-toggle span.hamburger::before {
+    background: #fff;
+  }
+}
+
 .menu-is-open .menu-toggle span.hamburger, .menu-is-open .menu-toggle span.hamburger::after, .menu-is-open .menu-toggle span.hamburger::before {
 	transition-delay: 0.12s;
 	-webkit-transform: translateX(60px);
