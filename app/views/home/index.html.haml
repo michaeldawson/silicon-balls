@@ -1,44 +1,40 @@
-%section#hero.hero-big{:style => "background:rgba(0,0,0,0.06);"}
-  #page-title.wrapper
-    %h1
-      We're a
-      %strong
-        %em Startup Fund
-      %br/
-      that's excited about
-      %strong
-        %em Adelaide
-    .spacer-small
-    %h5.title-alt
-      We fund early-stage companies with potential for big growth.
-      %br>/
-      Our goal is to help increase the number of quality ventures in Adelaide,
-      %br/
-      and to provide a model for early-stage angel investment in Australia.
+%section#hero.hero-big.text-light.parallax-section{"data-parallax-image" => image_path('malls-balls-dark.jpg')}
+  #page-title.wrapper-small.align-center
+    = image_tag 'logo-large-white.png', style: 'width: 50%'
+    %h6.title-alt.uppercase Investment Fund
+
 %section#page-body
+  .spacer-big
+  .wrapper-small
+    %h2 Entrepreneurship for fun and profit.
+    .column-section.clearfix
+      .column.one-half
+        %p We're an early-stage investment fund based in Adelaide, Australia. We love startup companies that have the potential grow big, fast - solving problems, building jobs, and making money in the process. We back companies in high-growth industries run by people that are driven to kick-ass.
+      .column.one-half.last-col
+        %p We're technologists, CEOs, founders, marketers, lawyers and beer enthusiasts. We love entrepreneurship, and want to share what we've learned, and help others to win.
+
   .spacer-big
   .wrapper
     .column-section.clearfix
       .column.one-third.align-center
         %i.fa.fa-cubes.fa-5x
         %h3 Very early-stage investment
-        %p Investing in very early stage ventures so as to expand the range of what is considered “investable” (and demonstrating how to do so)
+        %p We’re usually the first or second cheque, happy to lead or follow in a round. We invest up to $50k per round as a fund, but our members can (and do) invest on their own.
       .column.one-third.align-center
         %i.fa.fa-dollar.fa-5x
-        %h3 With readily-available capital
-        %p Deploying capital quickly and decisively, stimulating deal flow and encouraging innovation within the Adelaide ecosystem.
+        %h3 We help, but don't hold the reigns
+        %p We're passionate about startups, and love to help with mentoring, introductions and technical advice. But we also want to let entrepreneurs do what they do best.
       .column.one-third.last-col.align-center
         %i.ion.ion-heart.ion-6x
-        %h3
-          That's pro-people
-          %br/
-          &nbsp
-        %p Establishing non-predatory investment terms as the norm for early-stage investment, and allowing entrepreneurs to do what they do best.
+        %h3 With a focus on simplicity
+        %p We pride ourselves on presenting terms you can understand without going to a lawyer (but you should still totally get a lawyer). We're people, too.
     .spacer-big
+    .spacer-medium
 
-  .fullwidth-section.patterned
-    .fullwidth-content
-      %h3.align-center Want to talk?
+    .wrapper-small.align-center
+      %h6.title-alt.uppercase Think that you might be a good fit?
+      %h2 Tell us why we should invest in you.
       .spacer-medium
-      %p.align-center
-        = link_to 'Apply', applications_path, class: 'sr-button button-big'
+      %p
+        = link_to 'Apply', new_application_path, class: 'sr-button button-big'
+    .spacer-big
