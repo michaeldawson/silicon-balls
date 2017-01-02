@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get 'philosophy', to: 'home#philosophy'
 
-  resources :applications, only: [:new, :index] do
+  resources :applications, only: [:new, :create] do
     collection do
-      get 'investors'
+      get 'thanks'
     end
   end
 end
