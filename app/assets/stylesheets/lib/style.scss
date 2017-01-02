@@ -269,7 +269,9 @@ label {
 	transition: color 0.2s ease;
 	}
 	.text-light label { color: #ffffff; }
-	.form-group.check-error label { color: #ce4a4a; }
+	.form-group.has-error {
+    label, .standard-form-error-message { color: #ce4a4a; }
+  }
 
 label abbr {
 	color: rgba(0,0,0,0.5);

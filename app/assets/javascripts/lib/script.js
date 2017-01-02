@@ -107,7 +107,6 @@
   });
 
   $(window).scroll(function() {
-  	animateOnScroll(false);
   	headerFeatures();
   });
 

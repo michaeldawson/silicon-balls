@@ -37,4 +37,17 @@ feature 'Pitch page', js: true do
     expect(mail.to).to eq([ENV['NOTIFICATION_EMAIL']])
     expect(mail.subject).to eq('New pitch received')
   end
+
+  scenario 'when submitting an incomplete pitch, the user should see error messages' do
+    visit root_path
+    click_link 'Pitch to us'
+
+    fill_in 'What problem are you solving? Why is it important?', with: 'Problem'
+    fill_in 'What is your solution to this problem? Have you tested it with customers?', with: 'Solution'
+    fill_in 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?', with: 'Target market'
+    fill_in 'How will you make money? Who will pay, how much will they pay, and why will they pay?', with: 'Revenue streams'
+
+    click_on 'Send'
+    expect(page).to have_content('You need to answer at least half of these questions.')
+  end
 end

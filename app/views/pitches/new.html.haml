@@ -16,16 +16,16 @@
         %p Each section is limited to 100 words, so try to keep it brief.
 
       .column.two-third.last-col
-        = simple_form_for pitch, remote: true do |form|
-          = form.input :problem, placeholder: 'What problem are you solving? Why is it important?'
-          = form.input :solution, placeholder: 'What is your solution to this problem? Have you tested it with customers?'
-          = form.input :target_market, placeholder: 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?'
-          = form.input :revenue_streams, placeholder: 'How will you make money? Who will pay, how much will they pay, and why will they pay?'
-          = form.input :channels, placeholder: 'What channels will you use? How will you reach your customer segments?'
-          = form.input :traction, placeholder: 'What traction do you have so far? What does success look like? What would deem your product a success 2 years from now?'
-          = form.input :funding, placeholder: 'What funding are you seeking? What do you need it for?'
-          = form.input :team, placeholder: 'Introduce your team. What are the roles of each member? What experience does each member provide?'
-          = form.input :other, placeholder: 'Anything else to share?'
+        = simple_form_for pitch, remote: true, html: { class: 'remote-form' }, defaults: { wrapper_html: { class: "yay" } } do |form|
+          = form.input :problem, wrapper_html: { class: 'problem' }, placeholder: 'What problem are you solving? Why is it important?'
+          = form.input :solution, wrapper_html: { class: 'solution' }, placeholder: 'What is your solution to this problem? Have you tested it with customers?'
+          = form.input :target_market, wrapper_html: { class: 'target_market' }, placeholder: 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?'
+          = form.input :revenue_streams, wrapper_html: { class: 'revenue_streams' }, placeholder: 'How will you make money? Who will pay, how much will they pay, and why will they pay?'
+          = form.input :channels, wrapper_html: { class: 'channels' }, placeholder: 'What channels will you use? How will you reach your customer segments?'
+          = form.input :traction, wrapper_html: { class: 'traction' }, placeholder: 'What traction do you have so far? What does success look like? What would deem your product a success 2 years from now?'
+          = form.input :funding, wrapper_html: { class: 'funding' }, placeholder: 'What funding are you seeking? What do you need it for?'
+          = form.input :team, wrapper_html: { class: 'team' }, placeholder: 'Introduce your team. What are the roles of each member? What experience does each member provide?'
+          = form.input :other, wrapper_html: { class: 'other' }, placeholder: 'Anything else to share?'
           .spacer-small
           = form.submit 'Send'
   .spacer-big

@@ -3,7 +3,7 @@ class PitchesController < ApplicationController
     if pitch.save && pitch.send_email
       redirect_to thanks_pitches_path
     else
-      render json: pitch.errors
+      render json: { success: false, errors: pitch.errors }
     end
   end
 
