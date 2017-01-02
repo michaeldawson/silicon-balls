@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'philosophy', to: 'home#philosophy'
 
-  resources :applications, only: [:new, :create] do
+  resources :pitches, path: 'pitch', only: [:new, :create] do
     collection do
       get 'thanks'
     end

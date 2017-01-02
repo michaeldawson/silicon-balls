@@ -1,6 +1,6 @@
-class CreateApplications < ActiveRecord::Migration[5.0]
+class CreatePitches < ActiveRecord::Migration[5.0]
   def change
-    create_table :applications do |t|
+    create_table :pitches do |t|
       t.text :problem
       t.text :solution
       t.text :target_market

@@ -16,7 +16,7 @@
         %p Each section is limited to 100 words, so try to keep it brief.
 
       .column.two-third.last-col
-        = simple_form_for application, remote: true do |form|
+        = simple_form_for pitch, remote: true do |form|
           = form.input :problem, placeholder: 'What problem are you solving? Why is it important?'
           = form.input :solution, placeholder: 'What is your solution to this problem? Have you tested it with customers?'
           = form.input :target_market, placeholder: 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?'
