@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-feature 'Apply page', js: true do
-  scenario 'a user should be able to submit an application' do
+feature 'Pitch page', js: true do
+  scenario 'a user should be able to submit a pitch' do
     visit root_path
-    click_link 'Apply'
+    click_link 'Pitch to us'
 
     fill_in 'What problem are you solving? Why is it important?', with: 'Problem'
     fill_in 'What is your solution to this problem? Have you tested it with customers?', with: 'Solution'
@@ -17,20 +17,24 @@ feature 'Apply page', js: true do
 
     expect {
       click_on 'Send'
-      expect(page).to have_content("Thanks. We've received your submission.")
+      expect(page).to have_content("We've received your submission.")
     }.to change {
-      Application.count
+      Pitch.count
     }.by(1)
 
-    application = Application.last
-    expect(application.problem).to eq('Problem')
-    expect(application.solution).to eq('Solution')
-    expect(application.target_market).to eq('Target market')
-    expect(application.revenue_streams).to eq('Revenue streams')
-    expect(application.channels).to eq('Channels')
-    expect(application.traction).to eq('Traction')
-    expect(application.funding).to eq('Funding')
-    expect(application.team).to eq('Team')
-    expect(application.other).to eq('Other info')
+    pitch = Pitch.last
+    expect(pitch.problem).to eq('Problem')
+    expect(pitch.solution).to eq('Solution')
+    expect(pitch.target_market).to eq('Target market')
+    expect(pitch.revenue_streams).to eq('Revenue streams')
+    expect(pitch.channels).to eq('Channels')
+    expect(pitch.traction).to eq('Traction')
+    expect(pitch.funding).to eq('Funding')
+    expect(pitch.team).to eq('Team')
+    expect(pitch.other).to eq('Other info')
+
+    mail = ActionMailer::Base.deliveries.last
+    expect(mail.to).to eq([ENV['NOTIFICATION_EMAIL']])
+    expect(mail.subject).to eq('New pitch received')
   end
 end

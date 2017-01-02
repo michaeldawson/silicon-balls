@@ -12,7 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20161213104158) do
 
-  create_table "applications", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pitches", force: :cascade do |t|
     t.text     "problem"
     t.text     "solution"
     t.text     "target_market"
@@ -24,14 +32,6 @@ ActiveRecord::Schema.define(version: 20161213104158) do
     t.text     "other"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

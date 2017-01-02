@@ -14,11 +14,12 @@ RSpec.configure do |config|
   end
 
   Capybara.javascript_driver = ENV['DRIVER'].try(:to_sym) || :chrome
-  
+
   config.infer_spec_type_from_file_location!
 
-  # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
-  # arbitrary gems may also be filtered via:
-  # config.filter_gems_from_backtrace("gem name")
+
+  config.after do
+    ActionMailer::Base.deliveries.clear
+  end
 end
