@@ -1,4 +1,12 @@
 class ApplicationsController < ApplicationController
+  def create
+    if application.save
+      redirect_to thanks_applications_path
+    else
+      render json: application.errors
+    end
+  end
+
   private
 
   helper_method def application
@@ -10,6 +18,6 @@ class ApplicationsController < ApplicationController
   end
 
   def permitted_application_attributes
-    %i(team problem solution uvp segments metrics channels cost_structure revenue_streams funding funding_purpose funding_equity)
+    %i(problem solution target_market revenue_streams channels traction funding team other)
   end
 end

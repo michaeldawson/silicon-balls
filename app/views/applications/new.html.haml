@@ -18,14 +18,14 @@
       .column.two-third.last-col
         = simple_form_for application, remote: true do |form|
           = form.input :problem, placeholder: 'What problem are you solving? Why is it important?'
-          = form.input :solution, placeholder: 'What is your solution to this problem? Is it a work in progress? Have you tested it with customers?'
+          = form.input :solution, placeholder: 'What is your solution to this problem? Have you tested it with customers?'
           = form.input :target_market, placeholder: 'When you try to build a product for everyone, you end up creating a product for no-one. What are the customer segments that you serve?'
           = form.input :revenue_streams, placeholder: 'How will you make money? Who will pay, how much will they pay, and why will they pay?'
-          = form.input :channels, placeholder: 'How will you reach your customer segments?'
+          = form.input :channels, placeholder: 'What channels will you use? How will you reach your customer segments?'
           = form.input :traction, placeholder: 'What traction do you have so far? What does success look like? What would deem your product a success 2 years from now?'
           = form.input :funding, placeholder: 'What funding are you seeking? What do you need it for?'
           = form.input :team, placeholder: 'Introduce your team. What are the roles of each member? What experience does each member provide?'
           = form.input :other, placeholder: 'Anything else to share?'
           .spacer-small
-          = form.submit 'Send', onclick: 'javascript: alert("Nope. Not yet.")'
+          = form.submit 'Send'
   .spacer-big
