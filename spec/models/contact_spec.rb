@@ -30,4 +30,14 @@ RSpec.describe Contact do
       expect(contact).not_to be_valid
     end
   end
+
+  describe '#send_email' do
+    let(:mail) { double }
+
+    it 'sends an email' do
+      expect(ContactsMailer).to receive(:new_contact_received).with(contact).and_return(mail)
+      expect(mail).to receive(:deliver_now)
+      contact.send_email
+    end
+  end
 end

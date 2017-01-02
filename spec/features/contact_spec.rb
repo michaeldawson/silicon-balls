@@ -13,6 +13,9 @@ feature 'Contact form', js: true do
     }.to change {
       Contact.count
     }.by(1)
+
+    mail = ActionMailer::Base.deliveries.last
+    expect(mail.to).to eq([ENV['NOTIFICATION_EMAIL']])
   end
 
   scenario 'submissions without enough info show an error message' do
