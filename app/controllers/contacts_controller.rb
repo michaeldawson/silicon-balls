@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def create
-    if contact.save
+    if contact.save && contact.send_email
       render 'success'
     else
       render 'failure'

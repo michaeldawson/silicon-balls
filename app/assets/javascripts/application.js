@@ -4,3 +4,4 @@
 //= require lib/plugins
 //= require lib/jquery.backgroundparallax.min
 //= require lib/script
+//= require_tree .
