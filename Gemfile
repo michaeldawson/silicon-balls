@@ -26,8 +26,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'chromedriver-helper' # This shouldn't really be necessary
-
   gem 'capistrano', '~> 3.6'
   gem 'capistrano3-env', '~> 0.1.0'
   gem 'capistrano-rbenv', '~> 2.0'
