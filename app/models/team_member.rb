@@ -1,13 +1,7 @@
 class TeamMember < ApplicationRecord
   validates :name, presence: true
   validates :expertise, presence: true
-
   validate :social_attributes_are_urls
-  def social_attributes_are_urls
-    social_attributes.each do |key, value|
-      errors.add(key, 'must be a valid URL') unless value =~ /\A#{URI::regexp}\z/
-    end
-  end
 
   def social_attributes
     social_attribute_keys = %i(facebook twitter linkedin)
@@ -16,5 +10,13 @@ class TeamMember < ApplicationRecord
 
   def photo_path
     "team-members/#{name.parameterize}.jpg"
+  end
+
+  private
+
+  def social_attributes_are_urls
+    social_attributes.each do |key, value|
+      errors.add(key, 'must be a valid URL') unless value =~ /\A#{URI::regexp}\z/
+    end
   end
 end

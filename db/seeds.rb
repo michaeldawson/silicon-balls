@@ -9,4 +9,4 @@ team_members = [
 
 team_members.each do |attributes|
   TeamMember.find_or_initialize_by(name: attributes[:name]).update!(attributes)
-end
+]

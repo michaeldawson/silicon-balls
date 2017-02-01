@@ -40,10 +40,29 @@ ActiveRecord::Schema.define(version: 20170625002206) do
     t.text     "other"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "pitches", force: :cascade do |t|
+    t.text     "company_name"
+    t.text     "problem"
+    t.text     "current_solutions"
+    t.text     "solution"
+    t.text     "target_market"
+    t.text     "channels"
+    t.text     "revenue_streams"
+    t.text     "competitive_advantage"
+    t.text     "team"
+    t.text     "founders"
+    t.text     "traction"
+    t.text     "obstacles"
+    t.text     "funding"
+    t.text     "other"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "contact_details"
   end
 
-  create_table "team_members", force: :cascade do |t|
+  create_table "team_members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "expertise"
     t.string   "facebook"
