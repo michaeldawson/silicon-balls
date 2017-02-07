@@ -35,7 +35,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
