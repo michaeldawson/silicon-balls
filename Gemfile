@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'turbolinks', '~> 5'
 gem 'simple_form'
+gem 'mailgun_rails'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
