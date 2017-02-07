@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'philosophy', to: 'home#philosophy'
 
+  resources :team_members, path: 'team'
+
   resources :pitches, path: 'pitch', only: [:new, :create] do
     collection do
       get 'thanks'

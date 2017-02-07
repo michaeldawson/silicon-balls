@@ -1,0 +1,26 @@
+%section#hero.hero-auto{ style: 'background:rgba(0,0,0,0.06)' }
+  #page-title.wrapper
+    %h6.title-alt.uppercase Meet our people
+    %h2.title-alt
+      %strong
+        We're technologists, CEOs,
+        %br
+        founders, entrepreneurs, lawyers,
+        %br
+        beer brewers, marketers and media-makers.
+%section#page-body
+  .wrapper
+    .spacer-big
+    - team_members.in_groups_of(3).each do |group|
+      .column-section.clearfix
+        - group.compact.each_with_index do |team_member, index|
+          .column.one-third.team-member{ class: ('last-col' if index == 2) }
+            %img{ alt: team_member.name, src: image_path(team_member.photo_path) }/
+            .team-infos
+              %span.team-role= team_member.expertise
+              %h3.team-name
+                %strong= team_member.name
+              -# - team_member.social_attributes.each do |key, value|
+              -#   %li{ class: key }
+              -#     %a{ href: value }
+    .spacer-big
