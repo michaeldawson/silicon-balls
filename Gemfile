@@ -9,12 +9,9 @@ gem 'haml'
 gem 'turbolinks', '~> 5'
 gem 'simple_form'
 gem 'mailgun_rails'
+gem 'pg'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
-
-group :production do
-  gem 'mysql2'
-end
 
 group :development do
   # Style guides

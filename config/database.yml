@@ -1,5 +1,6 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: silicon_balls
   pool: 25
   timeout: 5000
@@ -13,6 +14,4 @@ test:
 
 production:
   <<: *default
-  username: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

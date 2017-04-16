@@ -145,7 +145,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
-    mysql2 (0.4.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
@@ -158,6 +157,7 @@ GEM
       iniparse (~> 1.4)
     parser (2.3.3.1)
       ast (~> 2.2)
+    pg (0.20.0)
     powerpack (0.1.1)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -303,8 +303,8 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   mailgun_rails
-  mysql2
   overcommit
+  pg
   rails (~> 5.0.0, >= 5.0.0.1)
   reek
   rspec-rails
@@ -320,4 +320,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
