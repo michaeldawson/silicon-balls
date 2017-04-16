@@ -18,6 +18,6 @@ class PitchesController < ApplicationController
   end
 
   def permitted_pitch_attributes
-    %i(problem solution target_market revenue_streams channels traction funding team other)
+    %i(company_name problem current_solutions solution target_market channels revenue_streams competitive_advantage team founders competitive_advantage traction obstacles funding other)
   end
 end

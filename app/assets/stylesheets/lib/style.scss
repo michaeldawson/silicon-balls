@@ -199,7 +199,7 @@ input.false[type=text], input.false[type=password]:focus, input.false[type=email
 }
 
 input[type=text], input[type=password], input[type=email] { width: 100%; max-width: calc(100% - 20px); }
-textarea { width: 100%; min-height: 10rem; max-width: calc(100% - 20px); }
+textarea { width: 100%; min-height: 5rem; max-width: calc(100% - 20px); }
 
 input[type=submit], input[type=button], button {
 	cursor: pointer;
