@@ -27,7 +27,7 @@ $.widget('custom.standardForm', {
       message = messages;
     }
 
-    if (attr === false || attr == 'base') {
+    if (attr === false || attr === 'base') {
       this.element.prepend($('<div></div>')
         .addClass('standard-form-error-message base-error-message')
         .html(message));
@@ -35,9 +35,7 @@ $.widget('custom.standardForm', {
       var form_group = formGroup || this.element.find('.form-group.' + attr);
       form_group.addClass('has-error');
       error_div = $('<div></div>').addClass('standard-form-error-message').html(message);
-      // error_icon = $('<i class="standard-form-error-icon"></i>');
       error_div.appendTo(form_group);
-      // form_group.find('.standard-form-control-wrapper').append(error_icon);
     }
   },
 
