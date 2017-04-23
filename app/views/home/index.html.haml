@@ -1,40 +1,20 @@
-%section#hero.hero-big.text-light.parallax-section{"data-parallax-image" => image_path('malls-balls-alt.jpg')}
+%section#hero.hero-big.text-light.parallax-section{"data-parallax-image" => image_path('malls-balls-large-square.jpg')}
   #page-title.wrapper-small.align-center
-    = image_tag 'logo-large-white.png', style: 'width: 50%'
-    %h6.title-alt.uppercase Investment Fund
-
-%section#page-body
-  .spacer-big
-  .wrapper-small
-    %h2 Entrepreneurship for fun and profit.
-    .column-section.clearfix
-      .column.one-half
-        %p We're an early-stage investment fund based in Adelaide, Australia. We love startup companies that have potential to grow big, fast - solving problems, building jobs, and making money.
-      .column.one-half.last-col
-        %p We're technologists, CEOs, founders, marketers, lawyers and beer enthusiasts. We love entrepreneurship, and want to share what we've learned, and help others to win.
-
-  .spacer-big
-  .wrapper
-    .column-section.clearfix
-      .column.one-third.align-center
-        %i.fa.fa-cubes.fa-5x
-        %h3 Very early-stage investment
-        %p We’re usually the first or second cheque, happy to lead or follow in a round. We invest up to $50k per round as a fund, but our members can (and do) invest on their own.
-      .column.one-third.align-center
-        %i.fa.fa-dollar.fa-5x
-        %h3 We like to help, but not hold the reigns
-        %p We're passionate about startups, and love to help with mentoring, introductions and technical advice where we can. But we also want to let entrepreneurs do what they do best.
-      .column.one-third.last-col.align-center
-        %i.ion.ion-heart.ion-6x
-        %h3 With a focus on simplicity
-        %p We pride ourselves on presenting terms you can understand without going to a lawyer (but you should still totally get a lawyer). We're nice people, too.
-    .spacer-big
+    = image_tag 'logo-large-white.png', style: 'width: 50%;'
+    %h6.title-alt.uppercase Seed Fund
     .spacer-medium
 
-    .wrapper-small.align-center
-      %h6.title-alt.uppercase Think that you might be a good fit?
-      %h2 Tell us why we should invest in you.
-      .spacer-medium
-      %p
-        = link_to 'Pitch to us', new_pitch_path, class: 'sr-button button-big'
+%section#page-body
+  .wrapper.align-center
+    .spacer-big
+    %h3
+      We're an early-stage
+      %strong
+        %em investment fund
+      %br
+      based in
+      %strong
+        %em Adelaide, Australia.
+    .spacer-medium
+    = link_to 'Tell us about your company', new_pitch_path, class: 'sr-button button-big'
     .spacer-big
