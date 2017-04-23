@@ -4,15 +4,19 @@ RSpec.describe Pitch, type: :model do
   let(:pitch) { described_class.new(valid_attributes) }
   let(:valid_attributes) {
     {
-      problem: 'Some text',
-      solution: 'Some text',
-      target_market: 'Some text',
-      revenue_streams: 'Some text',
-      channels: 'Some text',
-      traction: 'Some text',
-      funding: 'Some text',
-      team: 'Some text',
-      other: 'Some text',
+      company_name: 'Company name',
+      problem: 'Problem',
+      target_market: 'Target market',
+      current_solutions: 'Current solutions',
+      solution: 'Solution',
+      channels: 'Channels',
+      revenue_streams: 'Revenue streams',
+      team: 'Team',
+      competitive_advantage: 'Competitive advantage',
+      traction: 'Traction',
+      obstacles: 'Obstacles',
+      funding: 'Funding',
+      other: 'Other',
     }
   }
 
@@ -28,18 +32,23 @@ RSpec.describe Pitch, type: :model do
 
     it "isn't valid if less than half of the fields are filled in" do
       valid_attributes[:problem] = nil
-      valid_attributes[:solution] = nil
       valid_attributes[:target_market] = nil
-      valid_attributes[:revenue_streams] = nil
+      valid_attributes[:current_solutions] = nil
+      valid_attributes[:solution] = nil
       valid_attributes[:channels] = nil
+      valid_attributes[:revenue_streams] = nil
+      valid_attributes[:team] = nil
+
       expect(pitch).not_to be_valid
     end
 
     it "is valid if at least half of the fields are filled in" do
-      valid_attributes[:problem] = nil
-      valid_attributes[:solution] = nil
-      valid_attributes[:target_market] = nil
-      valid_attributes[:revenue_streams] = nil
+      valid_attributes[:competitive_advantage] = nil
+      valid_attributes[:traction] = nil
+      valid_attributes[:obstacles] = nil
+      valid_attributes[:funding] = nil
+      valid_attributes[:other] = nil
+
       expect(pitch).to be_valid
     end
   end

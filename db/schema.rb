@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161213104158) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -21,17 +24,22 @@ ActiveRecord::Schema.define(version: 20161213104158) do
   end
 
   create_table "pitches", force: :cascade do |t|
+    t.text     "company_name"
     t.text     "problem"
+    t.text     "current_solutions"
     t.text     "solution"
     t.text     "target_market"
-    t.text     "revenue_streams"
     t.text     "channels"
-    t.text     "traction"
-    t.text     "funding"
+    t.text     "revenue_streams"
+    t.text     "competitive_advantage"
     t.text     "team"
+    t.text     "founders"
+    t.text     "traction"
+    t.text     "obstacles"
+    t.text     "funding"
     t.text     "other"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end
