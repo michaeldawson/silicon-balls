@@ -1,20 +1,6 @@
-%section#hero.hero-big.text-light.parallax-section{"data-parallax-image" => image_path('malls-balls-large-square.jpg')}
+%section#hero.hero-big
   #page-title.wrapper-small.align-center
     = image_tag 'logo-large-white.png', style: 'width: 50%;'
     %h6.title-alt.uppercase Seed Fund
     .spacer-medium
-
-%section#page-body
-  .wrapper.align-center
-    .spacer-big
-    %h3
-      We're an early-stage
-      %strong
-        %em investment fund
-      %br
-      based in
-      %strong
-        %em Adelaide, Australia.
-    .spacer-medium
     = link_to 'Tell us about your company', new_pitch_path, class: 'sr-button button-big'
-    .spacer-big

@@ -3,5 +3,5 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  configure_layout header: { display_logo: true }
+  configure_layout header: { display_logo: true }, footer: { visible: true }
 end

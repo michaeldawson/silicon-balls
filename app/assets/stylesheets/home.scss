@@ -5,3 +5,20 @@
 #page-title img {
   margin-left: -5%;
 }
+
+.balls-background {
+  background: image-url('malls-balls-large-square') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h6 {
+    color: #fff;
+  }
+
+  .sr-button {
+    border-color: rgba(255, 255, 255, 0.26);
+    color: #ffffff !important;
+  }
+}
