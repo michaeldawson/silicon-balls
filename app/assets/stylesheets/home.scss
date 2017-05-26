@@ -6,16 +6,16 @@
   margin-left: -5%;
 }
 
+#hero.hero-big {
+  min-height: 100vh;
+}
+
 .balls-background {
   background: image-url('malls-balls-large-square') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  #hero.hero-big {
-    min-height: 100vh;
-  }
 
   h6 {
     color: #fff;
