@@ -52,14 +52,4 @@ RSpec.describe Pitch, type: :model do
       expect(pitch).to be_valid
     end
   end
-
-  describe '#send_email' do
-    let(:mail) { double }
-
-    it 'sends an email' do
-      expect(PitchesMailer).to receive(:new_pitch_received).with(pitch).and_return(mail)
-      expect(mail).to receive(:deliver_now)
-      pitch.send_email
-    end
-  end
 end

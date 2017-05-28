@@ -18,6 +18,7 @@ module SiliconBalls
 
     config.autoload_paths += [
       Rails.root.join('app', 'services'),
+      Rails.root.join('app', 'actions')
     ]
   end
 end

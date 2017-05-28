@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 feature 'Pitch page', js: true do
+  around do |example|
+    using_wait_time(5) { example.run }
+  end
+
   scenario 'a user should be able to submit a pitch' do
     visit root_path
     click_link 'Tell us about your company'
@@ -45,6 +49,7 @@ feature 'Pitch page', js: true do
     mail = ActionMailer::Base.deliveries.last
     expect(mail.to).to eq([ENV['NOTIFICATION_EMAIL']])
     expect(mail.subject).to eq('New pitch received')
+    expect(mail.attachments.first.filename).to eq('Company name.pdf')
   end
 
   scenario 'when submitting an incomplete pitch, the user should see error messages' do

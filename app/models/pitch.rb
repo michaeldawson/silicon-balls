@@ -21,8 +21,4 @@ class Pitch < ApplicationRecord
       errors.add(attribute_name, 'You need to answer at least half of these questions.')
     end
   end
-
-  def send_email
-    PitchesMailer.new_pitch_received(self).deliver_now
-  end
 end

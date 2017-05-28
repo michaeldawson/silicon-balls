@@ -1,6 +1,6 @@
 class PitchesController < ApplicationController
   def create
-    if pitch.save && pitch.send_email
+    if pitch.save && SendPitchEmail.new(pitch).perform
       redirect_to thanks_pitches_path
     else
       render json: { success: false, errors: pitch.errors }
