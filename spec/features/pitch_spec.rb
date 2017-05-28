@@ -2,7 +2,9 @@ require 'rails_helper'
 
 feature 'Pitch page', js: true do
   around do |example|
-    using_wait_time(5) { example.run }
+    using_wait_time(5) do
+      Sidekiq::Testing.inline! { example.run }
+    end
   end
 
   scenario 'a user should be able to submit a pitch' do
