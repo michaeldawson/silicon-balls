@@ -1,0 +1,19 @@
+%section#hero.hero-auto
+  #page-title.post-title.wrapper.align-center
+    %h1.post-name= pitch.company_name
+    .post-meta
+      %span.post-cat
+        pitch submitted
+        %a= pitch.created_at.in_time_zone('Adelaide').strftime('%d-%m-%Y, %l:%M%P')
+    .post-meta
+      %span.post-cat
+        via
+        %a siliconballs.com
+
+%section#page-body
+  #blog-single
+    .blog-media
+      .blog-content.wrapper-small
+        - %i{problem solution target_market revenue_streams channels traction funding team other}.each do |attribute|
+          %h5.title-alt= attribute.to_s.humanize
+          %p= pitch.send(attribute).presence || '(left blank)'

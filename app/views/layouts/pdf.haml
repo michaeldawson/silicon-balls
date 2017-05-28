@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title SiliconBalls
+    %meta{:charset => "utf-8"}
+    = wicked_pdf_stylesheet_link_tag 'application'
+    = wicked_pdf_stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Playfair+Display:400'
+    = wicked_pdf_stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Hind:300'
+  %body#pdf
+    #page-content
+      = render 'layouts/pdf/header'
+      = yield

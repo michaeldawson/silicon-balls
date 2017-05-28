@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pdf/pitch'
+
   root to: 'home#index'
 
   get 'contact', to: 'contacts#new'
