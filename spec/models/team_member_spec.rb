@@ -32,13 +32,10 @@ RSpec.describe TeamMember, type: :model do
       expect(subject).to be_valid
     end
 
-    context 'with invalid URLs for social attributes' do
-      invalid_urls = ['potato', 'http://facebookcom']
-      invalid_urls.each do |invalid_url|
-        it "isn't valid" do
-          valid_attributes[:facebook] = invalid_url
-          expect(subject).not_to be_valid
-        end
+    context 'with an invalid URL for social attributes' do
+      it "isn't valid" do
+        valid_attributes[:facebook] = 'potato'
+        expect(subject).not_to be_valid
       end
     end
   end
