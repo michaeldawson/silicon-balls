@@ -8,6 +8,8 @@ require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
 
+Capybara.server_errors = [Exception]
+
 RSpec.configure do |config|
   Capybara.register_driver :chrome do |app|
     Capybara::Selenium::Driver.new(app, browser: :chrome)
