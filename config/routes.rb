@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   get 'pdf/pitch'
 
@@ -15,4 +17,10 @@ Rails.application.routes.draw do
       get 'thanks'
     end
   end
+
+  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+    username == 'siliconballs' && password == 'balls of silicon, baby'
+  end if Rails.env.production?
+
+  mount Sidekiq::Web, at: '/sidekiq'
 end
