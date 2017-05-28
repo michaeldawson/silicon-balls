@@ -10,6 +10,8 @@ gem 'turbolinks', '~> 5'
 gem 'simple_form'
 gem 'mailgun_rails'
 gem 'pg'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
