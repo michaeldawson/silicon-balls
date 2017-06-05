@@ -35,6 +35,7 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 gem 'tzinfo-data'
