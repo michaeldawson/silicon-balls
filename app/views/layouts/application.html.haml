@@ -13,6 +13,7 @@
     %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
   %body{ class: layout_options[:body_class] }
     #page-content
+      = render 'layouts/admin_pre_header' if signed_in?
       = render 'layouts/header'
       = yield
       = render 'layouts/footer' if layout_options[:footer][:visible]

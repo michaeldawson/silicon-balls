@@ -1,0 +1,25 @@
+div[class*='alert-'] {
+	background: #000000;
+	color: #ffffff;
+	padding: 25px;
+	margin-top: 25px;
+	}
+	div div[class*='alert-']:first-child { margin: 0; }
+
+div[class*='alert-'] .alert-title {
+	color: #ffffff;
+	}
+
+div[class*='alert-'] .alert-title + p {
+	margin-top: 5px;
+	}
+
+div.alert-info { background: #6da3cd; }
+div.alert-error { background: #ce4a4a; }
+div.alert-confirm { background: #a8ce77; }
+div.alert-black {
+  color: #fff;
+  a {
+    color: #6da3cd;
+  }
+}
