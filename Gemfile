@@ -13,6 +13,7 @@ gem 'pg'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'sidekiq'
+gem 'clearance'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
