@@ -1,0 +1,10 @@
+{
+  "name": "Silicon Balls",
+  "description": "Website for the Adelaide seed fund Silicon Balls",
+  "keywords": ["dokku","rails"],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
