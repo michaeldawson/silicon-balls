@@ -27,8 +27,11 @@ feature 'Pitch page', js: true do
     fill_in 'Contact details', with: 'Call me maybe'
 
     expect {
-      click_on 'Submit'
-      expect(page).to have_content("We've received your submission.")
+      # In the test, we process PDFs synchronously, so allow a bit of time
+      using_wait_time(5) do
+        click_on 'Submit'
+        expect(page).to have_content("We've received your submission.")
+      end
     }.to change {
       Pitch.count
     }.by(1)
