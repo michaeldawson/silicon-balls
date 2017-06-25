@@ -10,5 +10,6 @@ FactoryGirl.define do
     funding 'Test funding'
     team 'Test team'
     other 'Test other'
+    contact_details 'Call me maybe'
   end
 end

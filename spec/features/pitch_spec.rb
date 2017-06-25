@@ -24,6 +24,7 @@ feature 'Pitch page', js: true do
     fill_in 'Obstacles', with: 'Obstacles'
     fill_in 'Funding', with: 'Funding'
     fill_in 'Other', with: 'Other'
+    fill_in 'Contact details', with: 'Call me maybe'
 
     expect {
       click_on 'Submit'

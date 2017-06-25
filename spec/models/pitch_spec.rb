@@ -17,6 +17,7 @@ RSpec.describe Pitch, type: :model do
       obstacles: 'Obstacles',
       funding: 'Funding',
       other: 'Other',
+      contact_details: 'Call me maybe',
     }
   }
 
@@ -47,9 +48,14 @@ RSpec.describe Pitch, type: :model do
       valid_attributes[:traction] = nil
       valid_attributes[:obstacles] = nil
       valid_attributes[:funding] = nil
-      valid_attributes[:other] = nil
 
       expect(pitch).to be_valid
+    end
+
+    it "isn't valid without contact details" do
+      valid_attributes[:contact_details] = nil
+
+      expect(pitch).not_to be_valid
     end
   end
 end

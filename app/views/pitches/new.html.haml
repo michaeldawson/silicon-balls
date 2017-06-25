@@ -27,7 +27,9 @@
       .column-section.clearfix
         .column.one-half= form.input :obstacles, wrapper_html: { class: 'obstacles' }, placeholder: 'What are the main obstacles ahead of you?'
         .column.one-half.last-col= form.input :funding, wrapper_html: { class: 'funding' }, placeholder: 'How much capital are you seeking? What will you use it on?'
-      = form.input :other, wrapper_html: { class: 'other' }, placeholder: 'Link to demo, website... anything else you think is important.'
+      .column-section.clearfix
+        .column.one-half= form.input :other, wrapper_html: { class: 'other' }, placeholder: 'Link to demo, website... anything else you think is important.'
+        .column.one-half.last-col= form.input :contact_details, as: :text, wrapper_html: { class: 'contact_details' }
 
       .spacer-medium
       = form.submit 'Submit'
