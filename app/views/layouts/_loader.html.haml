@@ -1,8 +1,6 @@
-/ PAGE LOADER
 #page-loader.pulsing
   .loader-name
-    %img{:alt => "Loader Logo", :src => "files/uploads/logo-dani-dark.png", :srcset => "files/uploads/logo-dani-dark.png 1x, files/uploads/logo-dani-dark@2x.png 2x"}/
+    = image_tag 'logo.png'
   .loader-circle
-    %svg{:style => "enable-background:new 0 0 253.4 253.4;", :version => "1.1", :viewbox => "0 0 253.4 253.4", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
-      %circle{:cx => "126.7", :cy => "126.7", :r => "124.2"}
-/ PAGE LOADER
+    %svg{ style: 'enable-background:new 0 0 253.4 253.4;', version: "1.1", viewbox: "0 0 253.4 253.4", x: "0px", "xmlspace": "preserve", xmlns: "http://www.w3.org/2000/svg", "xmlnsxlink": "http://www.w3.org/1999/xlink", y: "0px" }
+      %circle{ cx: '126.7', cy: '126.7', r: '124.2' }

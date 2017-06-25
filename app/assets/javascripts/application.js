@@ -6,3 +6,10 @@
 //= require lib/jquery.backgroundparallax.min
 //= require lib/script
 //= require_tree .
+
+$(window).load(function() {
+  $('html').addClass('loaded');
+  setTimeout(function() {
+    $('html').addClass('loading-end')
+  }, 1900)
+})
