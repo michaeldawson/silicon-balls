@@ -15,5 +15,8 @@
     .blog-media
       .blog-content.wrapper-small
         - %i{problem solution target_market revenue_streams channels traction funding team other}.each do |attribute|
-          %h5.title-alt= attribute.to_s.humanize
+          %h5= attribute.to_s.humanize
           %p= pitch.send(attribute).presence || '(left blank)'
+      .blog-content.wrapper-small
+        %h5 Contact details
+        = pitch.contact_details
