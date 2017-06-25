@@ -12,10 +12,9 @@ class Pitch < ApplicationRecord
   end
 
   def at_least_half_of_all_fields_completed
-    custom_attributes = attributes.except('id', 'company_name', 'created_at', 'updated_at')
-    attributes_count = custom_attributes.length
+    custom_attributes = attributes.except('id', 'company_name', 'other', 'created_at', 'updated_at')
     blank_attributes = custom_attributes.select { |attribute_name, value| value.blank? }
-    return if blank_attributes.length.to_f / attributes_count < 0.5
+    return if blank_attributes.length.to_f / custom_attributes.length < 0.5
 
     blank_attributes.each do |attribute_name, value|
       errors.add(attribute_name, 'You need to answer at least half of these questions.')
