@@ -16,6 +16,8 @@ module SiliconBalls
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << "#{Rails}/app/assets/fonts"
 
+    config.exceptions_app = self.routes
+
     config.autoload_paths += [
       Rails.root.join('app', 'services'),
       Rails.root.join('app', 'actions')
