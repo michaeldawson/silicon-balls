@@ -1,0 +1,12 @@
+%section#hero.hero-big{ style: 'background:rgba(0,0,0,0.06);'}
+  #page-title.wrapper
+    %h1= t(".title")
+    %h5.title-alt= t(".description")
+    .spacer-small
+    = form_for :password_reset, url: user_password_path(@user, token: @user.confirmation_token), html: { method: :put } do |form|
+      .password-field
+        = form.label :password
+        = form.password_field :password
+      .form-group
+        .submit-field
+          = form.submit

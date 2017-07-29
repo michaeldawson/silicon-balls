@@ -1,0 +1,12 @@
+%section#hero.hero-big{ style: 'background:rgba(0,0,0,0.06);'}
+  #page-title.wrapper
+    %h1= t(".title")
+    %h5.title-alt= t(".description")
+    .spacer-small
+    = form_for :password, url: passwords_path do |form|
+      .text-field
+        = form.label :email
+        = form.text_field :email, type: 'email'
+      .form-group
+        .submit-field
+          = form.submit
