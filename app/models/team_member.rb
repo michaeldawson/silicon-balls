@@ -1,4 +1,6 @@
 class TeamMember < ApplicationRecord
+  mount_uploader :picture, PictureUploader
+
   validates :name, presence: true
   validates :expertise, presence: true
   validate :social_attributes_are_urls

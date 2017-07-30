@@ -1,4 +1,5 @@
-%img{ alt: team_member.name, src: image_path(team_member.photo_path) }/
+- if team_member.picture.display.present?
+  = image_tag team_member.picture.display.url, alt: team_member.name
 .team-infos
   %span.team-role= team_member.expertise
   %h3.team-name
