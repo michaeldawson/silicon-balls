@@ -1,5 +1,8 @@
-.alert-black
-  %h5.title-alt.alert-title
-    %strong You are logged in as an admin.
-  To view the site as a regular user, you can
-  = link_to 'sign out.', sign_out_path, method: :delete
+- if flash.any?
+  = render 'layouts/flash'
+- else
+  .alert-black
+    %h5.title-alt.alert-title
+      %strong You are logged in as an admin.
+    To view the site as a regular user, you can
+    = link_to 'sign out.', sign_out_path, method: :delete

@@ -1,0 +1,14 @@
+.spacer-big
+.spacer-medium
+
+.wrapper
+  %h2= team_member.name
+  %h4.title-alt Editing as admin
+
+  = simple_form_for team_member do |form|
+    = form.input :name
+    = form.input :expertise
+    .spacer-small
+    = form.submit 'Save'
+
+.spacer-big

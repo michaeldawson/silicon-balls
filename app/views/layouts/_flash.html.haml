@@ -1,5 +1,4 @@
-.alert{ class: flash_class(type) }
-  %h5.title-alt.alert-title
-    %strong= message
-  %p
-    %em= submessage
+- flash.each do |type, message|
+  .alert{ class: flash_class(type) }
+    %h5.title-alt.alert-title
+      %strong= message
