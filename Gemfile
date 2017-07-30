@@ -14,6 +14,8 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'sidekiq'
 gem 'clearance'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
