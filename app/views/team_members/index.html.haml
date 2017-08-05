@@ -11,18 +11,20 @@
 %section#page-body
   .wrapper
     .spacer-medium
-    .column-section.team-members.clearfix
-      - team_members.each_with_index do |team_member, index|
-        .column.one-third.team-member{ class: ('last-col' if index == 2) }
-          - if signed_in?
-            = link_to edit_team_member_path(team_member) do
+    - team_members.in_groups_of(3).each do |group|
+      .column-section.team-members.clearfix
+        - group.compact.each_with_index do |team_member, index|
+          .column.one-third.team-member{ class: ('last-col' if index == 2) }
+            - if signed_in?
+              = link_to edit_team_member_path(team_member) do
+                = render 'team_member', team_member: team_member
+            - else
               = render 'team_member', team_member: team_member
-          - else
-            = render 'team_member', team_member: team_member
-            -# - team_member.social_attributes.each do |key, value|
-            -#   %li{ class: key }
-            -#     %a{ href: value }
-      - if signed_in?
+              -# - team_member.social_attributes.each do |key, value|
+              -#   %li{ class: key }
+              -#     %a{ href: value }
+    - if signed_in?
+      .column-section.team-members.clearfix
         .column.one-third.team-member.new-team-member
           = link_to new_team_member_path do
             %i.ion.ion-plus.ion-6x
