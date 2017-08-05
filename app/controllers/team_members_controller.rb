@@ -1,12 +1,30 @@
 class TeamMembersController < ApplicationController
+  def create
+    team_member.attributes = team_member_params
+
+    if team_member.save
+      flash[:notice] = 'Profile was created'
+      redirect_to team_members_path
+    else
+      flash[:error] = "Sorry, that didn't work"
+      render :new
+    end
+  end
+
   def update
     if team_member.update(team_member_params)
       flash[:notice] = 'Changes saved'
       redirect_to team_members_path
     else
       flash[:error] = "Sorry, that didn't work"
-      render 'edit'
+      render :edit
     end
+  end
+
+  def destroy
+    team_member.destroy!
+    flash[:notice] = 'Profile removed'
+    redirect_to team_members_path
   end
 
   private
@@ -16,7 +34,8 @@ class TeamMembersController < ApplicationController
   end
 
   helper_method def team_member
-    @team_member ||= TeamMember.find(params[:id])
+    @team_member ||= TeamMember.find(params[:id]) if params.key?(:id)
+    @team_member ||= TeamMember.new
   end
 
   def team_member_params

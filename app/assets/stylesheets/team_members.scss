@@ -1,6 +1,17 @@
 .team-member {
+  margin-top: 50px;
   img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+  }
+}
+
+.new-team-member {
+  a {
+    text-align: center;
+    display: block;
+  }
+  i {
+    margin: 85px 0 35px;
   }
 }

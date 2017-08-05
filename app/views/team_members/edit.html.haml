@@ -4,12 +4,9 @@
 .wrapper
   %h2= team_member.name
   %h4.title-alt Editing as admin
+  = render 'form', team_member: team_member
+  - if team_member.persisted?
+    .right-float.text-light
+      = button_to 'Remove profile', team_member_path(team_member), role: 'button', method: :delete
 
-  = simple_form_for team_member do |form|
-    = form.input :name
-    = form.input :expertise
-    = form.input :picture
-    .spacer-small
-    = form.submit 'Save'
-
-.spacer-big
+.spacer-medium
