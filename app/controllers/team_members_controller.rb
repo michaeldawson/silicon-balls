@@ -30,7 +30,7 @@ class TeamMembersController < ApplicationController
   private
 
   helper_method def team_members
-    @team_members ||= TeamMember.all.reverse
+    @team_members ||= TeamMember.all.shuffle
   end
 
   helper_method def team_member
