@@ -21,7 +21,6 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development do
   # Style guides
-  gem 'overcommit', require: false
   gem 'rubocop', require: false
   gem 'haml-lint', require: false
   gem 'reek', require: false
