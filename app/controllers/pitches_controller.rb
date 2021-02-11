@@ -8,6 +8,10 @@ class PitchesController < ApplicationController
     end
   end
 
+  def new
+    redirect_to root_path
+  end
+
   private
 
   helper_method def pitch
