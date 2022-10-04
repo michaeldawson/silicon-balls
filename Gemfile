@@ -14,7 +14,7 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'sidekiq'
 gem 'clearance'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 gem 'globalid', '~> 1.0'
 
