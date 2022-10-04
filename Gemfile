@@ -16,6 +16,7 @@ gem 'sidekiq'
 gem 'clearance'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'globalid', '~> 1.0'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
