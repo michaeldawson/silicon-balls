@@ -3,7 +3,7 @@ class TeamMember < ApplicationRecord
 
   validates :name, presence: true
   validates :expertise, presence: true
-  validates :picture, presence: true
+  # validates :picture, presence: true
   validate :social_attributes_are_urls
 
   def social_attributes
